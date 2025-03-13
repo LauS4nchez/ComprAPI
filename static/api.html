@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComprAPI - Buscador</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/rating.css">
+</head>
+<body class="body2">
+    <header class="header">
+        <div class="logo">
+            <h1>ComprAPI</h1>
+            <img src="img/logo2.png">
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="btn-2">Inicio</a>
+        </nav>
+    </header>
+
+    <section class="formulario">
+        <h2>¿Qué te gustaría buscar hoy?</h2>
+        <form onsubmit="fetchItem(event)">
+            <label for="itemName">Producto:</label>
+            <input type="text" id="itemName" name="itemName" required>
+    
+            <label for="country">País:</label>
+            <select id="country" name="country" required>
+                <option value="us">Estados Unidos</option>
+                <option value="au">Australia</option>
+                <option value="ca">Canadá</option>
+                <option value="nz">Nueva Zelanda</option>
+            </select><br><br>
+            <div class="descuentos">
+                <label for="discount">Solo productos con descuento:</label>
+                <input class="verificar" type="checkbox" id="discount" name="discount"><br><br>
+            </div>
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+
+        <section class="resultados">
+            <h2>Resultados</h2>
+            <div class="carousel-container">
+                <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <div class="carousel" id="carousel"></div>
+                <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+
+            <div class="resultados-grid">
+                <div class="resultado" id="result" style="display: grid; grid-template-columns: auto auto auto auto auto"></div>
+            </div>
+        </section>
+
+    
+        <footer>
+            <img src="img/logo2.png" alt="Alternate Text" />
+            <table>
+                <tr>
+                    <td>Contacto</td>
+                    <td>Informacion</td>
+                    <td>Sobre Nosotros</td>
+                </tr>
+                <tr>
+                    <td>Reseñas</td>
+                    <td>Api</td>
+                    <td>Redes Sociales</td>
+                </tr>
+            </table>
+            <div class="copy">
+                <p>© Copyright 2024 ComprAPI Inc. All Rights Reserved. All Images, Content and Conceptual Ideas are Exclusive Property of ComprAPI Inc.</p>
+            </div>
+        </footer>
+
+
+        
+    <script src="scripts/form.js"></script>
+    <script src="scripts/rating.js"></script>
+    <script src="scripts/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.star {
+    font-size: 30px;
+    color: gold;
+    display: inline-block;
+  }
+  
+  .star.empty {
+    color: lightgray;
+  }
+  
+  .star.half {
+    background: linear-gradient(to right, gold 50%, lightgray 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
